@@ -34,4 +34,13 @@ public class Topping {
     public void setPrezzo(double prezzo) {
         this.prezzo = prezzo;
     }
+
+    @Override
+    public String toString() {
+        return "Topping{" +
+                "nome='" + nome + '\'' +
+                ", calorie=" + calorie +
+                ", prezzo=" + prezzo +
+                '}';
+    }
 }

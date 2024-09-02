@@ -4,12 +4,14 @@ import java.util.List;
 
 public class Pizza {
     private String nome;
+    private List ingredientiBase;
     private List <Topping> toppings;
     private int calorie;
     private double prezzo;
 
-    public Pizza(String nome, List<Topping> toppings, int calorie, double prezzo) {
+    public Pizza(String nome, List ingredientiBase, List<Topping> toppings, int calorie, double prezzo) {
         this.nome = nome;
+        this.ingredientiBase = ingredientiBase;
         this.toppings = toppings;
         this.calorie = calorie;
         this.prezzo = prezzo;
@@ -21,6 +23,14 @@ public class Pizza {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public List getIngredientiBase() {
+        return ingredientiBase;
+    }
+
+    public void setIngredientiBase(List ingredientiBase) {
+        this.ingredientiBase = ingredientiBase;
     }
 
     public List<Topping> getToppings() {
@@ -51,6 +61,7 @@ public class Pizza {
     public String toString() {
         return "Pizza{" +
                 "nome='" + nome + '\'' +
+                ", ingredientiBase=" + ingredientiBase +
                 ", toppings=" + toppings +
                 ", calorie=" + calorie +
                 ", prezzo=" + prezzo +
